@@ -48,7 +48,7 @@ for filename in os.listdir(photodir):
 
 photos = []
 
-for filename in os.listdir(photodir):
+for filename in sorted(os.listdir(photodir), key=str):
     if filename.endswith("_thumb.jpg"):
         os.remove(os.path.join(photodir, filename))
     else:
