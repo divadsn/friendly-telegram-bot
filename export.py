@@ -62,7 +62,7 @@ count = 1
 for photo in photos:
     image = Image.open(photo)
     image = image.convert("RGB")
-    image.save(os.path.join(imagedir, "{:04d}.webp".format(count)))
+    image.save(os.path.join(imagedir, str(count).zfill(4)))
     
     os.remove(photo)
     count += 1
